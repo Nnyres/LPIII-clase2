@@ -1,14 +1,18 @@
 package src.package2;
 
-import src.package1.Prueba;
-
-import javax.sound.midi.Soundbank;
+import src.Builder.Empleado;
+import src.singleton.Singleton;
 
 public class main {
 
-    Prueba prueba = new Prueba();
-    System.out.printf("Aqui Arranque");
+     public static void main(String[] args) {
+         Empleado empleado = Empleado.builder()
+                 .id(1234)
+                 .nombre("Andrés")
+                 .build();
 
 
 
+         System.out.println(empleado);
+     }
 }
